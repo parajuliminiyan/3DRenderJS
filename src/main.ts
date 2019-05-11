@@ -17,7 +17,7 @@ export default class Main {
   private static renderLoopCall: (frameTime: number) => void;
 
   public static main(): void {
-    console.log(new PhysicsWorld();
+    let a = new PhysicsWorld();
     this.display.createCanvas([window.innerWidth, window.innerHeight]);
     RenderDefaults.getInstance().loadResource();
 
