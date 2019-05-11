@@ -1,6 +1,8 @@
-import "@stardazed/ammo";
-class PhysicsWorld {
+//import Ammo from "@stardazed/ammo";
+import Ammo from 'ammo.js';
+export default class PhysicsWorld {
   constructor() {
+
     let broadphase = new Ammo.btDbvtBroadphase();
     let collConfig = new Ammo.btDefaultCollisionConfiguration();
     let dispatcher = new Ammo.btCollisionDispatcher(collConfig);

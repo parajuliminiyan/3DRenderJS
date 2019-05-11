@@ -7,6 +7,7 @@ import Material from "./render_engine/model/material";
 import { MaterialShader } from "./render_engine/shader/shader_config";
 import RenderDefaults from "./render_engine/render_defaults";
 import SimLoop from "./sim_loop";
+import PhysicsWorld from "./physics/physics_world";
 
 export default class Main {
   private static display = DisplayManager.getInstance();
@@ -16,6 +17,7 @@ export default class Main {
   private static renderLoopCall: (frameTime: number) => void;
 
   public static main(): void {
+    console.log(new PhysicsWorld();
     this.display.createCanvas([window.innerWidth, window.innerHeight]);
     RenderDefaults.getInstance().loadResource();
 
