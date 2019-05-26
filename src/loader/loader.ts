@@ -6,7 +6,7 @@ type ModelLoadedCallback = (
   name: String,
   loadCounter: number
 ) => void;
-type ParserCallaback = (data: any) => void;
+type ParserCallaback = (data: string) => void;
 
 export default class Loader {
   private modelLoadedCallback: ModelLoadedCallback;
@@ -72,6 +72,9 @@ export default class Loader {
             this.parseObjModel(data, nameExt[0])
           );
           break;
+        case "dae":
+          this.loadData(path, "text", data => {
+          });
         default:
           console.log("Unsupported model type ", nameExt[1]);
           break;
